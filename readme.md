@@ -49,7 +49,7 @@ mac上利用`applescript`实现`doc`批量另存为`docx`或`html`
 docker run --rm -it --security-opt="apparmor=unconfined" \
   --security-opt="seccomp=unconfined"  \
   --cap-add=SYS_PTRACE -v "$(pwd):/go/src/app" \
-  newbmiao/gdb-go1.14rc1:latest bash
+  newbmiao/gdb-go:1.14 bash
 
 // 2. 编译go，不使用compressdwarf 、inline and escape
 go build -ldflags=-compressdwarf=false -gcflags=all="-N -l" -o test test.go
